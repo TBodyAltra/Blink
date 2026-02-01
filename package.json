@@ -1,0 +1,54 @@
+{
+  "name": "blink",
+  "displayName": "Blink",
+  "description": "提醒程序员记得眨眼，保护眼睛健康",
+  "version": "0.1.0",
+  "publisher": "your-publisher-id",
+  "repository": "https://github.com/your-username/Blink",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other",
+    "Visualization"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Blink",
+      "properties": {
+        "blink.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "是否启用状态栏眨眼动画提醒"
+        },
+        "blink.animationIntervalMs": {
+          "type": "number",
+          "default": 800,
+          "minimum": 300,
+          "maximum": 3000,
+          "description": "眨眼动画切换间隔（毫秒），越小动画越快"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "blink.remindNow",
+        "title": "Blink: 立即提醒眨眼"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "npm run compile && npx @vscode/vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "typescript": "^4.9.0"
+  }
+}
