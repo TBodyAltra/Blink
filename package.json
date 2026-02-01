@@ -3,8 +3,8 @@
   "displayName": "Blink",
   "description": "提醒程序员记得眨眼，保护眼睛健康",
   "version": "0.1.0",
-  "publisher": "your-publisher-id",
-  "repository": "https://github.com/your-username/Blink",
+  "publisher": "xukang",
+  "repository": "git@github.com:TBodyAltra/Blink.git",
   "engines": {
     "vscode": "^1.74.0"
   },
